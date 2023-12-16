@@ -1,0 +1,7 @@
+langchain
+openai
+load_dotenv
+langserve[all]
+qdrant-client
+tiktoken
+fastapi

@@ -1,0 +1,8 @@
+create task
+delete task
+read task
+update task
+create user
+delete user
+read user
+update user

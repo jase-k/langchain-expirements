@@ -1,0 +1,56 @@
+mutation createTask{
+  create_tasks(input:{
+    status:STRING,
+    user_id: INT,
+    description:STRING
+  }){
+    id,
+    description,
+    due_date,
+    user {
+      id,
+      username
+    }
+  }
+}
+
+mutation updateTask{
+  update_tasks(id: ID!, input:{
+    status:STRING,
+    user_id: INT,
+    description:STRING
+    due_date:YYYY-MM-DD
+  }){
+    id,
+    description,
+    due_date,
+    user {
+      id,
+      username
+    }
+  }
+}
+
+mutation updateTask{
+  delete_tasks(id: ID!){
+    id,
+    description,
+    due_date,
+    user {
+      id,
+      username
+    }
+  }
+}
+
+query Tasks{
+    tasks{
+        id,
+        description,
+        due_date,
+        user {
+            id,
+            username
+        }
+  }
+}
